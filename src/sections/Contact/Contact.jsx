@@ -28,7 +28,7 @@ function Contact() {
         transition={{ duration: 0.6, delay: 0.3 }}
       >
         <a
-          href="mailto:hashakala8867@gmail.com"
+          href="mailto:harshakala8867@gmail.com"
           className={styles.emailButton}
         >
           <FaEnvelope style={{ marginRight: '8px' }} />
