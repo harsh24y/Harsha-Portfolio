@@ -32,7 +32,7 @@ function Contact() {
           className={styles.emailButton}
         >
           <FaEnvelope style={{ marginRight: '8px' }} />
-          hashakala8867@gmail.com
+          harshakala8867@gmail.com
         </a>
       </motion.div>
     </motion.section>
