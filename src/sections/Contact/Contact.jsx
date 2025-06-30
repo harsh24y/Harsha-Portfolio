@@ -1,47 +1,41 @@
 import styles from './ContactStyles.module.css';
+import { motion } from 'framer-motion';
+import { FaEnvelope } from 'react-icons/fa';
 
 function Contact() {
   return (
-    <section id="contact" className={styles.container}>
-      <h1 className="sectionTitle">Contact</h1>
-      <form action="">
-        <div className="formGroup">
-          <label htmlFor="name" hidden>
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-          />
-        </div>
-        <div className="formGroup">
-          <label htmlFor="email" hidden>
-            Email
-          </label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div className="formGroup">
-          <label htmlFor="message" hidden>
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Message"
-            required></textarea>
-        </div>
-        <input className="hover btn" type="submit" value="Submit" />
-      </form>
-    </section>
+    <motion.section
+      id="contact"
+      className={styles.container}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <motion.h1
+        className="sectionTitle"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        CONTACT
+      </motion.h1>
+
+      <motion.div
+        className={styles.contactDetails}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <a
+          href="mailto:hashakala8867@gmail.com"
+          className={styles.emailButton}
+        >
+          <FaEnvelope style={{ marginRight: '8px' }} />
+          hashakala8867@gmail.com
+        </a>
+      </motion.div>
+    </motion.section>
   );
 }
 
